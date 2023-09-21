@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 #pragma warning disable 618, 649
@@ -140,8 +141,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource.clip = m_JumpSound;
             m_AudioSource.Play();
         }
+      
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Enemy")) {
 
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
+            }
+        }
         private void ProgressStepCycle(float speed)
         {
             if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
