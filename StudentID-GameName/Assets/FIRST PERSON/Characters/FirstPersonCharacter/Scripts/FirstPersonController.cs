@@ -12,6 +12,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        public GameObject losemenu;
+
+
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -45,7 +48,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
 
         // Use this for initialization
-        private void Start()
+        void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
@@ -141,13 +144,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource.clip = m_JumpSound;
             m_AudioSource.Play();
         }
-      
+
+        void GameOver()
+        {
+            Time.timeScale = 0;
+            losemenu.SetActive(true);
+        }
+
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Enemy")) {
-
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
+            if (other.CompareTag("Enemy"))
+            {
+                GameOver();
+                Cursor.visible = true;
             }
         }
         private void ProgressStepCycle(float speed)
