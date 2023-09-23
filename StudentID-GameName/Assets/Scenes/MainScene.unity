@@ -1935,6 +1935,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &319729578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+  m_PrefabInstance: {fileID: 1305117489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &319729582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319729578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d54f5a876ddca48bb703fdd42b8239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlight: {fileID: 1715079803}
+  turnOn: {fileID: 0}
+  turnOff: {fileID: 0}
+  on: 0
+  off: 0
 --- !u!1 &323992711
 GameObject:
   m_ObjectHideFlags: 0
@@ -11109,28 +11131,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63db7ddc407c15e43b94a759f1f3ec09, type: 3}
---- !u!1 &1755316038 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-  m_PrefabInstance: {fileID: 1305117489}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1755316044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755316038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d54f5a876ddca48bb703fdd42b8239, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashlight: {fileID: 1715079803}
-  turnOn: {fileID: 0}
-  turnOff: {fileID: 0}
-  on: 0
-  off: 0
 --- !u!4 &1755863420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1409281433570831479, guid: c60dc63d4379a7f419a4c47bb40dc5f0, type: 3}
