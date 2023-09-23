@@ -1955,8 +1955,8 @@ MonoBehaviour:
   flashlight: {fileID: 1715079803}
   turnOn: {fileID: 0}
   turnOff: {fileID: 0}
-  on: 0
-  off: 0
+  enemyMovement: {fileID: 80618087}
+  isFlashlightOn: 0
 --- !u!1 &323992711
 GameObject:
   m_ObjectHideFlags: 0
